@@ -1,6 +1,6 @@
 # Ragify-Python
 
-Ragify-Python is a Python command-line tool for concatenating files within a directory based on specified include and exclude patterns. This tool is particularly useful for merging files with different extensions and organizing content from various sources into a single output file.
+Ragify-Python is a Python command-line tool designed to neatly combine files within a directory based on specified include and exclude patterns. This tool is particularly useful for organizing content from various sources into a single output file, facilitating the understanding of the codebase structure by large language models (LLMs) in the context of Retrieval Augmented Generation (RAG).
 
 ## Features
 
@@ -8,7 +8,7 @@ Ragify-Python is a Python command-line tool for concatenating files within a dir
 - Include files based on patterns specified in an include file.
 - Exclude files based on patterns specified in an exclude file.
 - Specify file extensions to include.
-- Output the concatenated content to a specified file.
+- Output the concatenated content to a specified file in a structured format.
 
 ## Installation
 
@@ -82,6 +82,22 @@ ragify <folder> --output <output_file>
 ```bash
 ragify test_dir --include include_patterns.txt --exclude exclude_patterns.txt --output output/output.txt
 ```
+
+The output file will have a structure like this:
+
+```
+---
+file: file1.py
+---
+Content of file1.py
+
+---
+file: subdir1/file5.js
+---
+Content of file5.js
+```
+
+This structured format helps large language models (LLMs) understand the structure of the codebase with ease, facilitating tasks like Retrieval Augmented Generation (RAG).
 
 ## Testing
 
